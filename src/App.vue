@@ -1,10 +1,18 @@
 <template>
-  <h1>Random Comic sssssssssssss</h1>
+  <h1>Random Comic</h1>
 </template>
 
 <script>
+import ComicsServices from "@/services/comics";
+
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    ComicsServices.get_current_commic()
+    .then(resp => {
+      console.log(resp.data);
+    })
+  }
 }
 </script>
 

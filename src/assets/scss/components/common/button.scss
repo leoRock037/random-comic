@@ -1,0 +1,31 @@
+// =============================================================================
+// RANDOM BUTTON
+// =============================================================================
+
+button {
+  box-shadow: 0px 6px 14px -8px rgba(171,171,171,1);
+  border: 1px solid $dark-gray;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+  padding: 14px 16px;
+  border-radius: 4px;
+  color: $dark-gray;
+  appearance: none;
+  font-weight: 500;
+  transition: 0.3s;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+
+  i {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  &.btn-small {
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+}

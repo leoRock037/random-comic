@@ -1,0 +1,25 @@
+// =============================================================================
+// STARS
+// =============================================================================
+
+.stars {
+  align-items: center;
+  margin-bottom: 20px;
+  display: flex;
+
+  i {
+    font-size: 20px;
+  }
+
+  .ri-star-fill {
+    color: $primary-yellow;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  li + li {
+    margin-left: 10px;
+  }
+}

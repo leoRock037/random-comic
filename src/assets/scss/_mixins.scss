@@ -2,7 +2,6 @@
 // MIXINS
 // =============================================================================
 
-
 // Scroll Bar
 @mixin scroll-bar($bg-color, $bar-color, $width: 5px) {
   &::-webkit-scrollbar {

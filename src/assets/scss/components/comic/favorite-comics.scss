@@ -1,0 +1,53 @@
+.comics-list {
+  background: #f5f5f5;
+  align-items: flex-end;
+  position: fixed;
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  li + li {
+    margin-left: 20px;
+  }
+
+  li {
+    background: #ffff;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  h3 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  }
+
+  img {
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    height: 100px;
+    width: 100px;
+  }
+
+  .stars {
+    justify-content: center;
+    margin: 0;
+
+    li {
+      padding: 5px;
+      margin: 0;
+
+      i {
+        font-size: 13px;
+      }
+    }
+  }
+}

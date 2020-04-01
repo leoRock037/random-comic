@@ -47,6 +47,7 @@ img {
 
 .no-scroll {
   position: relative;
+  overflow: hidden;
 
   &:before {
     background-color: rgba(0,0,0,0.8);

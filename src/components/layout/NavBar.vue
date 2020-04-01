@@ -1,8 +1,10 @@
 <template>
   <nav>
     <span>Random Comic</span>
+    <a class="mobile" @click="showFavorites()">My favourites</a>
+
     <div class="actions">
-      <a @click="showFavorites()">My favourites</a>
+      <a class="web" @click="showFavorites()">My favourites</a>
       <Button
         text="Random Comic"
         icon="ri-shuffle-line"

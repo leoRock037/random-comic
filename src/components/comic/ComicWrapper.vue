@@ -1,8 +1,10 @@
 <template>
   <div class="comic-wrapper">
+    <!-- Image -->
     <div class="comic-image">
       <img :src="comic.img" alt="comic">
     </div>
+    <!-- Description -->
     <div class="comic-description">
       <div>
         <h1>{{ comic.safe_title }}</h1>

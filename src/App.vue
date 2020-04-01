@@ -1,11 +1,14 @@
 <template>
   <div>
+    <!-- Navbar -->
     <NavBar
       v-on:get-random-comic="getRandomComic()"
       v-on:show-favorites="showFavorites()"
     />
+    <!-- Comics -->
     <ComicWrapper :comic="comic" v-if="comic" />
-    <FavoriteComics v-if="showfavorites" />
+    <!-- Favorite Comics -->
+    <FavoriteComics v-if="showfavorites" v-on:close="showFavorites()" />
   </div>
 </template>
 

@@ -6,7 +6,12 @@
       v-on:show-favorites="showFavorites()"
     />
     <!-- Comics -->
-    <ComicWrapper :comic="comic" v-if="comic" />
+    <div class="loading" v-if="loading">
+      <h1>Loading Random Comic</h1>
+      <img src="@/assets/images/loading.gif" alt="loading">
+    </div>
+    <ComicWrapper :comic="comic" v-else />
+
     <!-- Favorite Comics -->
     <FavoriteComics v-if="showfavorites" v-on:close="showFavorites()" />
   </div>
@@ -30,11 +35,12 @@ export default {
     return {
       comic: null,
       showfavorites: false,
-      currentComicNumber: 0
+      currentComicNumber: 0,
+      loading: true
     }
   },
   created() {
-    this.getRandomComic();
+    this.getCurrentComicNumber();
   },
   methods: {
     getCurrentComicNumber () {
@@ -46,12 +52,14 @@ export default {
         })
     },
     getRandomComic () {
-      //const random = Math.floor(Math.random() * this.currentComicNumber) + 1;
-      const random = Math.floor(Math.random() * 2000) + 1;
+      this.loading = true;
+
+      const random = Math.floor(Math.random() * this.currentComicNumber) + 1;
 
       ComicsServices.get_random_commic(random)
         .then(resp => {
           this.comic = resp.data;
+          this.loading = false;
         })
     },
     showFavorites () {
